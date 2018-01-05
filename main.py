@@ -5,7 +5,6 @@ from flask_restful import  reqparse
 app = Flask(__name__)
 api = Api(app)
 
-
 class RegistUser(Resource):
     def post(self):
         parser = reqparse.RequestParser()
@@ -23,13 +22,15 @@ class RegistUser(Resource):
 
 class Write(Resource):
     def post(self):
-        a = 1
-        b = 3
-        c = a + b
-        return {'result' : c}
+
+        return {'result' : '오키키'}
 
 api.add_resource(RegistUser, '/user')
 api.add_resource(Write, '/write')
+
+@app.route('/')
+def hell_world():
+    return "Hello! World!"
 
 if __name__ == '__main__':
     app.run(debug=True)
