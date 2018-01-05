@@ -134,7 +134,7 @@ class DaumDictCrawler:
 				sample[j-1] = items[i]
 		return sample
 
-if __name__ == '__main__':
+if __name__ == '__main__1':
 	daumDict = DaumDictCrawler()
 	sent_set = daumDict.performSentenceDB(2, '여행', 10, 10)
 	print("#"*70)
