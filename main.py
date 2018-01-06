@@ -28,7 +28,7 @@ class Write(Resource):
 api.add_resource(RegistUser, '/user')
 api.add_resource(Write, '/write')
 
-@app.route('/')
+@app.route('/write')
 def hello_world():
     return "Hello, World!"
 
