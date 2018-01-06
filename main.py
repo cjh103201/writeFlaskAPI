@@ -28,5 +28,9 @@ class Write(Resource):
 api.add_resource(RegistUser, '/user')
 api.add_resource(Write, '/write')
 
+@app.route('/')
+def hello_world():
+    return "Hello, World!"
+
 if __name__ == '__main__':
     app.run(debug=True)
